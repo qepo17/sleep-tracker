@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   post "sessions", to: "sessions#create"
-  
+
   get "sleep_records", to: "sleep_records#index"
-  post "sleep_records", to: "sleep_records#create"
+  post "sleep_records/clock_in", to: "sleep_records#clock_in"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
