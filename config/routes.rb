@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post "users/follows", to: "user#follow"
+
   post "sessions", to: "sessions#create"
 
   get "sleep_records", to: "sleep_records#index"
