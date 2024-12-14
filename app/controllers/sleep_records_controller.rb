@@ -18,7 +18,7 @@ class SleepRecordsController < ApplicationController
 
     return unauthorized_response unless current_user_id
 
-    sleep_record = SleepRecord.new(sleep_record_params)
+    sleep_record = SleepRecord.new(clock_in_time: Time.now)
     sleep_record.user_id = current_user_id
 
     return error_response("Failed to create sleep record. Please contact support", 400) unless sleep_record.save
@@ -40,7 +40,7 @@ class SleepRecordsController < ApplicationController
     return forbidden_response if sleep_record.user_id != current_user_id
 
     return error_response("You already clocked out", 400) unless sleep_record.clock_out_time.nil?
-    
+
     clock_out_time = Time.now
     return error_response("You cannot clock out before clocking in", 400) if sleep_record.clock_in_time > clock_out_time
     
@@ -52,11 +52,5 @@ class SleepRecordsController < ApplicationController
     return error_response("Failed to create sleep record. Please contact support", 400) unless sleep_record.save
   
     success_response(sleep_record, :created)
-  end
-
-  private
-  
-  def sleep_record_params
-    params.permit(:clock_in_time)
   end
 end
