@@ -7,9 +7,29 @@ Things you may want to cover:
 
 * Ruby version
 
+ruby 3.3.5
+
 * System dependencies
 
-* Configuration
+- PostgreSQL 17
+
+* Initiate development environment
+
+- Install devbox
+
+https://www.jetify.com/docs/devbox/installing_devbox/
+
+- Run devbox
+
+```bash
+devbox shell
+```
+
+- Install rails
+
+```bash
+gem install rails
+```
 
 * Database creation
 
