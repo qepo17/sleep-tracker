@@ -1,0 +1,70 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "ruby_3_2@latest": {
+      "last_modified": "2024-12-03T12:40:06Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/566e53c2ad750c84f6d31f9ccb9d00f823165550#ruby_3_2",
+      "source": "devbox-search",
+      "version": "3.2.6",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/r18d6nwgm3g3962r38ig9vv14g37z5n4-ruby-3.2.6",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/k3aw80r8f294bhb07n7cqi5135rfn3s1-ruby-3.2.6-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/r18d6nwgm3g3962r38ig9vv14g37z5n4-ruby-3.2.6"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/jlva87lwmlicqg9c57j9b5kpx768vj4m-ruby-3.2.6",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/q1yazygn6jjwbszbb7hhdgm6q8n40prn-ruby-3.2.6-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/jlva87lwmlicqg9c57j9b5kpx768vj4m-ruby-3.2.6"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/99wgz2kca2df8xjspf318ivirlfchs6r-ruby-3.2.6",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/nba9mc5wynx0j8yy5jf66pam636w7kfc-ruby-3.2.6-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/99wgz2kca2df8xjspf318ivirlfchs6r-ruby-3.2.6"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/k7rn39ipkirv9gb842klym88gs6rjdaa-ruby-3.2.6",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/1fgcd8nai9xlkqjws1ab9hs8zrlv51hn-ruby-3.2.6-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/k7rn39ipkirv9gb842klym88gs6rjdaa-ruby-3.2.6"
+        }
+      }
+    }
+  }
+}
