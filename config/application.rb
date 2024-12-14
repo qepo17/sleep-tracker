@@ -29,6 +29,10 @@ module SleepTracker
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
+    config.session_store :cookie_store, key: '_interslice_session'
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use config.session_store, config.session_options
+
     # Configuration for setting the orm to use UUIDs for primary keys.
     config.generators do |g|
       g.orm :active_record, primary_key_type: :uuid
