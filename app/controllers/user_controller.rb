@@ -20,4 +20,18 @@ class UserController < ApplicationController
   
     success_response(user_follow, :created)
   end
+
+  def unfollow
+    current_user_id = session[:current_user_id]
+    return unauthorized_response unless current_user_id
+
+    following_id = params[:user_id]
+    return error_response("Invalid user id", 400) if following_id.nil? || following_id.empty?
+
+    user_follow = UserFollow.find_by(follower_id: current_user_id, following_id: following_id)
+    return error_response("User not followed", 400) if user_follow.nil?
+
+    user_follow.destroy
+    success_response(user_follow, :ok)
+  end
 end

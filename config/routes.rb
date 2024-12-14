@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   post "users/follows", to: "user#follow"
+  delete "users/unfollows", to: "user#unfollow"
 
   post "sessions", to: "sessions#create"
 
