@@ -3,7 +3,8 @@
   "packages": [
     "libyaml@latest",
     "ruby@latest",
-    "rubyPackages.psych@latest"
+    "rubyPackages.psych@latest",
+    "postgresql_17@latest"
   ],
   "shell": {
     "init_hook": [
