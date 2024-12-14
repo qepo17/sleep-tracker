@@ -53,4 +53,29 @@ class SleepRecordsController < ApplicationController
   
     success_response(sleep_record, :created)
   end
+
+  def following_sleep_records
+    current_user_id = session[:current_user_id]
+    return unauthorized_response unless current_user_id
+
+    query = "SELECT 
+                sr.id,
+                sr.clock_in_time,
+                sr.clock_out_time,
+                sr.duration_in_seconds,
+                u.name
+            FROM sleep_records sr
+            JOIN users u ON sr.user_id = u.id
+            JOIN user_follows uf ON sr.user_id = uf.following_id
+            WHERE 
+                uf.follower_id = ?
+                and sr.clock_in_time > current_date - interval '7 days'
+                and sr.duration_in_seconds is not null
+            ORDER by sr.duration_in_seconds desc"
+
+    sleep_records = SleepRecord.find_by_sql([query, current_user_id])
+    return error_response("No sleep records found", 404) if sleep_records.nil? || sleep_records.empty?
+
+    success_response(sleep_records, :ok)
+  end
 end

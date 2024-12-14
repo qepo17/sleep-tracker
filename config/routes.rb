@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post "sessions", to: "sessions#create"
 
   get "sleep_records", to: "sleep_records#index"
+  get "sleep_records/following", to: "sleep_records#following_sleep_records"
   post "sleep_records/clock_in", to: "sleep_records#clock_in"
   post "sleep_records/:id/clock_out", to: "sleep_records#clock_out"
 
