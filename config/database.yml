@@ -4,6 +4,7 @@ default: &default
   timeout: 5000
 
 development:
+  url: postgresql://postgres:password@localhost:5432/sleep_tracker
   adapter: postgresql
   encoding: unicode
   database: sleep_tracker

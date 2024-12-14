@@ -1,19 +1,31 @@
 {
+  "env": {
+    "DATABASE_URL":          "postgresql://postgres:password@localhost:5432/sleep_tracker"
+  },
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox.schema.json",
   "packages": [
     "libyaml@latest",
     "ruby@latest",
     "rubyPackages.psych@latest",
+    "octavePackages.database@latest",
     "postgresql_17@latest"
   ],
   "shell": {
     "init_hook": [
-      "echo 'Welcome to devbox!' > /dev/null"
+      "./bin/bundle install"
     ],
     "scripts": {
-      "test": [
-        "echo \"Error: no test specified\" && exit 1"
-      ]
+      "init_db": [
+        "initdb -U postgres -W",
+        "devbox services up -b",
+        "./bin/rails db:create"
+      ],
+      "start_db": [
+        "devbox services up -b"
+      ],
+      "migrate_db":   ["./bin/rails db:migrate"],
+      "run_test":     ["./bin/rails test"],
+      "start_server": ["./bin/rails server"]
     }
   }
 }

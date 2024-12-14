@@ -19,26 +19,38 @@ ruby 3.3.5
 
 https://www.jetify.com/docs/devbox/installing_devbox/
 
+- Setup ENV
+
+See what's inside `devbox.json` env section
+
 - Run devbox
 
 ```bash
 devbox shell
 ```
 
-- Install rails
+- Run migrations
 
 ```bash
-gem install rails
+rails db:migrate
 ```
-
-* Database creation
 
 * Database initialization
 
+- Init DB
+
+```bash
+devbox run init_db
+```
+
+- Run DB
+
+```bash
+devbox run start_db
+```
+
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+devbox run run_test
+```

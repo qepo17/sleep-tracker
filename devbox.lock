@@ -65,6 +65,54 @@
         }
       }
     },
+    "octavePackages.database@latest": {
+      "last_modified": "2024-11-26T10:33:56Z",
+      "resolved": "github:NixOS/nixpkgs/af51545ec9a44eadf3fe3547610a5cdd882bc34e#octavePackages.database",
+      "source": "devbox-search",
+      "version": "9.2.0-database-2.4.4",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gib22bxx2j5s6i9q1yipj6k29vymrf9y-octave-9.2.0-database-2.4.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gib22bxx2j5s6i9q1yipj6k29vymrf9y-octave-9.2.0-database-2.4.4"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/yizl7ksnzcnz0llagallln80jr6nlhkb-octave-9.2.0-database-2.4.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/yizl7ksnzcnz0llagallln80jr6nlhkb-octave-9.2.0-database-2.4.4"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/zgxs3a0z80xsyywvrpi4g1d5s4z6gxcv-octave-9.2.0-database-2.4.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/zgxs3a0z80xsyywvrpi4g1d5s4z6gxcv-octave-9.2.0-database-2.4.4"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/5n4xylb173y1b5wqdgigpim92gdqyx8x-octave-9.2.0-database-2.4.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/5n4xylb173y1b5wqdgigpim92gdqyx8x-octave-9.2.0-database-2.4.4"
+        }
+      }
+    },
     "postgresql_17@latest": {
       "last_modified": "2024-12-09T13:13:08Z",
       "plugin_version": "0.0.2",

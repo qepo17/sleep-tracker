@@ -1,0 +1,22 @@
+current directory: /home/opiq/src/personal/sleep-tracker/vendor/bundle/ruby/3.3.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+/nix/store/vpaj7w9aif0gbfs2bfpvav8a2026wkam-ruby-3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/opiq/src/personal/sleep-tracker/vendor/bundle/ruby/3.3.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20241214-172762-rpjaw2 sitelibdir\=./.gem.20241214-172762-rpjaw2 clean
+
+current directory: /home/opiq/src/personal/sleep-tracker/vendor/bundle/ruby/3.3.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20241214-172762-rpjaw2 sitelibdir\=./.gem.20241214-172762-rpjaw2
+compiling bcrypt_pbkdf.c
+compiling bcrypt_pbkdf_ext.c
+compiling blowfish.c
+compiling explicit_bzero.c
+compiling hash_sha512.c
+linking shared-object bcrypt_pbkdf_ext.so
+
+current directory: /home/opiq/src/personal/sleep-tracker/vendor/bundle/ruby/3.3.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20241214-172762-rpjaw2 sitelibdir\=./.gem.20241214-172762-rpjaw2 install
+install -c -p -m 755 bcrypt_pbkdf_ext.so ./.gem.20241214-172762-rpjaw2
+
+current directory: /home/opiq/src/personal/sleep-tracker/vendor/bundle/ruby/3.3.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20241214-172762-rpjaw2 sitelibdir\=./.gem.20241214-172762-rpjaw2 clean

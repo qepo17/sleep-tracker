@@ -1,0 +1,24 @@
+current directory: /home/opiq/src/personal/sleep-tracker/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+/nix/store/vpaj7w9aif0gbfs2bfpvav8a2026wkam-ruby-3.3.5/bin/ruby extconf.rb
+checking for rb_category_warn()... yes
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /home/opiq/src/personal/sleep-tracker/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20241214-172762-g30sm8 sitelibdir\=./.gem.20241214-172762-g30sm8 clean
+
+current directory: /home/opiq/src/personal/sleep-tracker/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20241214-172762-g30sm8 sitelibdir\=./.gem.20241214-172762-g30sm8
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.so
+
+current directory: /home/opiq/src/personal/sleep-tracker/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20241214-172762-g30sm8 sitelibdir\=./.gem.20241214-172762-g30sm8 install
+install -c -p -m 755 date_core.so ./.gem.20241214-172762-g30sm8
+
+current directory: /home/opiq/src/personal/sleep-tracker/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20241214-172762-g30sm8 sitelibdir\=./.gem.20241214-172762-g30sm8 clean
