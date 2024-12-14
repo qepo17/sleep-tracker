@@ -1,6 +1,70 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "libyaml@latest": {
+      "last_modified": "2024-11-28T07:51:56Z",
+      "resolved": "github:NixOS/nixpkgs/226216574ada4c3ecefcbbec41f39ce4655f78ef#libyaml",
+      "source": "devbox-search",
+      "version": "0.2.5",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hb829kkyldkg58w0bdr4qfl89rnw4ck6-libyaml-0.2.5",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/qfl6i5zl2xy96xq1fynnamaqrax8qrfq-libyaml-0.2.5-dev"
+            }
+          ],
+          "store_path": "/nix/store/hb829kkyldkg58w0bdr4qfl89rnw4ck6-libyaml-0.2.5"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/zpifacr64w4akb6ykvcqp7plx2cybxl4-libyaml-0.2.5",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/5zhvh8ld0hdn0akr4b27lr7rdzq9y9da-libyaml-0.2.5-dev"
+            }
+          ],
+          "store_path": "/nix/store/zpifacr64w4akb6ykvcqp7plx2cybxl4-libyaml-0.2.5"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/bgw1k7sg5rahw407mklqqnfhmxrw75ns-libyaml-0.2.5",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/d47hgv5k65gkm4y8s68ll9bz4m8ac3jb-libyaml-0.2.5-dev"
+            }
+          ],
+          "store_path": "/nix/store/bgw1k7sg5rahw407mklqqnfhmxrw75ns-libyaml-0.2.5"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/9m4nrjik2837143iins0hlbnr7cs7psf-libyaml-0.2.5",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/35ch73iqqbywckwrr872mq6k3m9n4fs8-libyaml-0.2.5-dev"
+            }
+          ],
+          "store_path": "/nix/store/9m4nrjik2837143iins0hlbnr7cs7psf-libyaml-0.2.5"
+        }
+      }
+    },
     "ruby_3_2@latest": {
       "last_modified": "2024-12-03T12:40:06Z",
       "plugin_version": "0.0.2",
