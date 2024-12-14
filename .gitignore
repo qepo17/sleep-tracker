@@ -33,3 +33,6 @@
 
 .devbox
 .vscode
+
+/vendor/bundle
+/vendor/cache
