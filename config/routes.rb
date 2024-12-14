@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get "sleep_records", to: "sleep_records#index"
   post "sleep_records/clock_in", to: "sleep_records#clock_in"
+  post "sleep_records/:id/clock_out", to: "sleep_records#clock_out"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
