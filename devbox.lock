@@ -65,6 +65,54 @@
         }
       }
     },
+    "rubyPackages_3_2.psych@latest": {
+      "last_modified": "2024-11-28T07:51:56Z",
+      "resolved": "github:NixOS/nixpkgs/226216574ada4c3ecefcbbec41f39ce4655f78ef#rubyPackages_3_2.psych",
+      "source": "devbox-search",
+      "version": "5.1.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/32mhsxk7jv51nar4r2kkprlvwn54192k-ruby3.2-psych-5.1.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/32mhsxk7jv51nar4r2kkprlvwn54192k-ruby3.2-psych-5.1.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/0cn86zzwhmag973nxfc9d3ds9dbr6mqd-ruby3.2-psych-5.1.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/0cn86zzwhmag973nxfc9d3ds9dbr6mqd-ruby3.2-psych-5.1.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6wsvxvi2fax945xqzyrvmf4vgxp7vrln-ruby3.2-psych-5.1.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/6wsvxvi2fax945xqzyrvmf4vgxp7vrln-ruby3.2-psych-5.1.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/abhsv934n2cpwbvs05rzamw43aw58lkn-ruby3.2-psych-5.1.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/abhsv934n2cpwbvs05rzamw43aw58lkn-ruby3.2-psych-5.1.2"
+        }
+      }
+    },
     "ruby_3_2@latest": {
       "last_modified": "2024-12-03T12:40:06Z",
       "plugin_version": "0.0.2",
