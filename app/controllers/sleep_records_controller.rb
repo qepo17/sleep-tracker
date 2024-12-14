@@ -4,11 +4,11 @@ class SleepRecordsController < ApplicationController
 
     return unauthorized_response unless current_user_id
 
-    sleep_records = SleepRecord.find_by(user_id: 1)
+    sleep_records = SleepRecord.where(user_id: current_user_id).order(created_at: :desc)
 
     return error_response("No sleep records found", 404) if sleep_records.nil? || sleep_records.empty?
 
-    render success_response(sleep_records, :created)
+    success_response(sleep_records, :created)
   end
 
   def clock_in
