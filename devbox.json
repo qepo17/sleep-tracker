@@ -1,9 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox.schema.json",
   "packages": [
-    "ruby_3_2@latest",
     "libyaml@latest",
-    "rubyPackages_3_2.psych@latest"
+    "ruby@latest",
+    "rubyPackages.psych@latest"
   ],
   "shell": {
     "init_hook": [
