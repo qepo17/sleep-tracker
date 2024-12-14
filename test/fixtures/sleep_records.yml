@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  clock_in_time: 
+  clock_out_time: 
+  duration_in_seconds: 1
+
+two:
+  user_id: 
+  clock_in_time: 
+  clock_out_time: 
+  duration_in_seconds: 1
