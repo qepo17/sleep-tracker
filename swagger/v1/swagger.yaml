@@ -1,0 +1,289 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/sleep_records":
+    get:
+      summary: List all sleep records
+      tags:
+      - Sleep Records
+      responses:
+        '200':
+          description: sleep records found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      format: uuid
+                    clock_in_time:
+                      type: string
+                      format: date-time
+                    clock_out_time:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    duration_in_seconds:
+                      type: integer
+                      nullable: true
+  "/sleep_records/clock_in":
+    post:
+      summary: Clock in for sleep
+      tags:
+      - Sleep Records
+      responses:
+        '201':
+          description: Clocked in successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    format: uuid
+                  user_id:
+                    type: string
+                    format: uuid
+                  clock_in_time:
+                    type: string
+                    format: date-time
+                  clock_out_time:
+                    type: string
+                    format: date-time
+                    nullable: true
+                  duration_in_seconds:
+                    type: integer
+                    nullable: true
+                  created_at:
+                    type: string
+                    format: date-time
+                  updated_at:
+                    type: string
+                    format: date-time
+        '401':
+          description: Unauthorized
+  "/sleep_records/{id}/clock_out":
+    post:
+      summary: Clock out from sleep
+      tags:
+      - Sleep Records
+      parameters:
+      - name: id
+        in: path
+        format: uuid
+        description: Sleep record ID
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Clocked out successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    format: uuid
+                  user_id:
+                    type: string
+                    format: uuid
+                  clock_in_time:
+                    type: string
+                    format: date-time
+                  clock_out_time:
+                    type: string
+                    format: date-time
+                  duration_in_seconds:
+                    type: integer
+                  created_at:
+                    type: string
+                    format: date-time
+                  updated_at:
+                    type: string
+                    format: date-time
+        '401':
+          description: Unauthorized
+        '404':
+          description: Sleep record not found
+  "/sleep_records/following":
+    get:
+      summary: List sleep records of followed users from the last 7 days
+      tags:
+      - Sleep Records
+      description: Returns sleep records of users that the current user follows, showing
+        only completed records from the last 7 days, ordered by duration
+      responses:
+        '200':
+          description: Following users sleep records found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      format: uuid
+                    clock_in_time:
+                      type: string
+                      format: date-time
+                    clock_out_time:
+                      type: string
+                      format: date-time
+                    duration_in_seconds:
+                      type: integer
+                    name:
+                      type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '404':
+          description: No sleep records found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+  "/users/follows":
+    post:
+      summary: Follow a user
+      tags:
+      - Users
+      description: Creates a new follow relationship between the current user and
+        the target user
+      parameters: []
+      responses:
+        '200':
+          description: Successfully followed user
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    format: uuid
+                  follower_id:
+                    type: string
+                    format: uuid
+                  following_id:
+                    type: string
+                    format: uuid
+                  created_at:
+                    type: string
+                    format: date-time
+                  updated_at:
+                    type: string
+                    format: date-time
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: string
+                  format: uuid
+              required:
+              - user_id
+  "/users/unfollows":
+    delete:
+      summary: Unfollow a user
+      tags:
+      - Users
+      description: Removes a follow relationship between the current user and the
+        target user
+      parameters: []
+      responses:
+        '200':
+          description: Successfully unfollowed user
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    format: uuid
+                  follower_id:
+                    type: string
+                    format: uuid
+                  following_id:
+                    type: string
+                    format: uuid
+                  created_at:
+                    type: string
+                    format: date-time
+                  updated_at:
+                    type: string
+                    format: date-time
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: string
+                  format: uuid
+              required:
+              - user_id
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
