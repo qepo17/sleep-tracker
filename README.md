@@ -1,9 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Toy project to track sleep, built with Ruby on Rails and PostgreSQL
 
 * Ruby version
 
